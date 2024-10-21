@@ -2,7 +2,7 @@ const produtosCarrinho = document.querySelector<HTMLDivElement>('#produtos')!;
 const subtotalElement = document.querySelector<HTMLSpanElement>('#precoFinal')!;
 
 const verificarLogin = (): boolean => {
-  return localStorage.getItem('usuarioLogado') !== null; 
+  return localStorage.getItem('usuarioLogado') !== null;
 };
 
 if (!verificarLogin()) {
@@ -112,10 +112,12 @@ const renderizarCarrinho = () => {
 
 const loadCarrinho = async () => {
     try {
-        const response = await fetch('https://fakestoreapi.com/carts/1');
+
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado') || '{}');
+        const response = await fetch(`https://fakestoreapi.com/carts/user/${usuarioLogado.id}`);
         const produtos = await response.json();
 
-        const productRequests = produtos.products.map(async (item: { productId: number; quantity: number }) => {
+        const productRequests = produtos[0].products.map(async (item: { productId: number; quantity: number }) => {
             const productResponse = await fetch(`https://fakestoreapi.com/products/${item.productId}`);
             const product: Produto = await productResponse.json();
             return { ...item, product };
