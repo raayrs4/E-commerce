@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/section.css">
-    <link rel="stylesheet" href="./styles/produtos.css">
+    <!-- <link rel="stylesheet" href="./styles/produtos.css"> -->
+    <link rel="stylesheet" href="./styles/carrinho.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -25,37 +26,49 @@
         <ul class="nav-links">
             <li><a href="./index.html">Home</a></li>
             <li><a href="login.html">Login</a></li>
-            <li class="btn-carrinho"><a href="carrinho.html">Buy now</a><i class="fas fa-shopping-bag"></i></li>
         </ul>
     </nav>
 
-    <section class="destaque">
-        <div class="destaque-texto">
-            <h1>Bold style every day</h1>
-            <p>Shop our latest collections for everyday wear and standout looks, tailored to fit your lifestyle.</p>
-        </div>
-        <div class="destaque-foto">
-            <img src="./images/unsplash-destaque.jpg" alt="Foto de roupa">
-        </div>
-    </section>
-
-    <main>
-        <h1>Collection</h1>
-        <section id="produtos">
-            <div class="card-detalhes hidden" id="cardDetalhes">
-                <div class="produto-detalhe">
-                    <i class="fas fa-times" id="fecharCard"></i>
-                    <img src="" alt="Produto">
-                    <div class="infos">
+    <!-- <main class="container">
+        <h1>Cart</h1>
+        <div class="produtos-carrinho" id="produtos">
+             <div class="produto" id="divProduto">
+                <img src="" alt="Produto">
+                <div class="infos-do-produto">
+                    <div class="detalhes-produto">
                         <h3 class="titulo-produto"></h3>
-                        <p class="descricao-produto"></p>
-                        <p class="categoria-produto"></p>
                         <p class="preco-produto"></p>
+                    </div>
+                    <div class="detalhes-compra">
+                        <div class="quantidade">
+                            <button id="btnMenos">-</button>
+                            <p id="quantidade">01 un.</p>
+                            <button id="btnMais">+</button>
+                        </div>
+                        <i class="fas fa-trash"></i>
                     </div>
                 </div>
             </div>
-        </section>
+
+         <div id="produtosCarrinho"></div>
+        <div id="carrinho">
+            <p>Subtotal: <span id="precoFinal"></span></p>
+            <p class="btn-carrinho">Buy</p>
+        </div>
+
+        </div>
+    </main> -->
+
+    <main class="container">
+        <h1>Cart</h1>
+        <div class="produtos-carrinho" id="produtos"></div>
+
+        <div id="carrinho">
+            <p>Subtotal: <span id="precoFinal">$0.00</span></p>
+            <p class="btn-carrinho">Buy</p>
+        </div>
     </main>
+
 
     <footer class="footer">
         <p>Desenvolvido por <a href="https://github.com/LeandroRibeiroCode" target="_blank">Leandro Ribeiro</a>, <a
@@ -63,7 +76,7 @@
                 href="https://github.com/raayrs4" target="_blank">Rayane
                 Santos.</a></p>
     </footer>
-    <script src="./ts/index.ts"></script>
+    <script src="./ts/carrinho.ts"></script>
 </body>
 
 </html>

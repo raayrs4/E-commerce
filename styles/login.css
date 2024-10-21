@@ -1,0 +1,82 @@
+.container {
+    border-top: 1px solid #EFEBE6;
+    color: #643F24;
+    background-color: #E7E0D8;
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container h1 {
+    font-size: 50px;
+    width: 40%;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 50px;
+    text-align: end;
+}
+
+.div-login {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 400px;
+    background-color: #643F24;
+    padding: 4rem 2rem;
+}
+
+.div-login input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.email, .senha {
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid #643F24;
+    padding: .75rem;
+    background-color: #E7E0D8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.senha i {
+    cursor: pointer;
+}
+
+.email input::placeholder,
+.senha input::placeholder {
+    color: #643F24;
+}
+
+.btn button {
+    width: 100%;
+    border: 1px solid #643F24;
+    padding: .75rem;
+    background-color: #E7E0D8;
+    cursor: pointer;
+    font-weight: 700;
+    color: #643F24;
+}
+
+.message {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    padding: .75rem 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.erro-message {
+    background-color: #FF4133;
+    color: #FFD9D6;
+}
+
+.hidden {
+    display: none;
+}

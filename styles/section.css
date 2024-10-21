@@ -1,0 +1,30 @@
+.destaque {
+    background-color: #E7E0D8;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-top: 1px solid #EFEBE6;
+}
+
+.destaque-texto h1 {
+    font-size: 60px;
+    font-weight: 500;
+    color: #643F24;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+.destaque-texto p {
+    margin-top: 1.5rem;
+    width: 50%;
+}
+
+.destaque-foto {
+    width: 70%;
+}
+
+.destaque-foto img {
+    width: 100%;
+    border-radius: 1rem;
+}

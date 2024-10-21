@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zobina</title>
+    <title>Zobina - Login</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/navbar.css">
-    <link rel="stylesheet" href="./styles/section.css">
-    <link rel="stylesheet" href="./styles/produtos.css">
+    <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -24,37 +23,27 @@
         <span><a href="index.html">Zobina</a></span>
         <ul class="nav-links">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
             <li class="btn-carrinho"><a href="carrinho.html">Buy now</a><i class="fas fa-shopping-bag"></i></li>
         </ul>
     </nav>
 
-    <section class="destaque">
-        <div class="destaque-texto">
-            <h1>Bold style every day</h1>
-            <p>Shop our latest collections for everyday wear and standout looks, tailored to fit your lifestyle.</p>
-        </div>
-        <div class="destaque-foto">
-            <img src="./images/unsplash-destaque.jpg" alt="Foto de roupa">
-        </div>
-    </section>
 
-    <main>
-        <h1>Collection</h1>
-        <section id="produtos">
-            <div class="card-detalhes hidden" id="cardDetalhes">
-                <div class="produto-detalhe">
-                    <i class="fas fa-times" id="fecharCard"></i>
-                    <img src="" alt="Produto">
-                    <div class="infos">
-                        <h3 class="titulo-produto"></h3>
-                        <p class="descricao-produto"></p>
-                        <p class="categoria-produto"></p>
-                        <p class="preco-produto"></p>
-                    </div>
-                </div>
+    <main class="container">
+        <h1>Welcome back</h1>
+        <div class="div-login">
+            <div class="message hidden" id="message"></div>
+            <div class="email">
+                <input type="text" placeholder="Usuario" name="username" id="username" required>
+                <i class="fas fa-user"></i>
             </div>
-        </section>
+            <div class="senha">
+                <input type="password" placeholder="Senha" name="senha" id="senha" required>
+                <i class="fas fa-eye" id="iconeExibirSenha"></i>
+            </div>
+            <div class="btn" id="loginBtn">
+                <button>Entrar</button>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -63,7 +52,7 @@
                 href="https://github.com/raayrs4" target="_blank">Rayane
                 Santos.</a></p>
     </footer>
-    <script src="./ts/index.ts"></script>
+    <script src="./ts/login.ts"></script>
 </body>
 
 </html>
