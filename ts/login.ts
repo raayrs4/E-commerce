@@ -23,7 +23,8 @@ loginButton.addEventListener("click", async () => {
         const user = users.find(user => user.username === username && user.password === password);
 
         if (user) {
-            window.location.href = "index.html";
+          localStorage.setItem('usuarioLogado', JSON.stringify(user));
+          window.location.href = "index.html";
         } else {
             messageDiv.classList.remove("hidden");
             messageDiv.classList.add('erro-message');
@@ -38,3 +39,4 @@ loginButton.addEventListener("click", async () => {
         messageDiv.innerText = "Ocorreu um erro. Tente novamente mais tarde.";
     }
 });
+

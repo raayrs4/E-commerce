@@ -5,6 +5,3 @@ Carrinho
 
 Login
     1. Guardar o token no localstorage
-
-Index
-    1. Garantir que o usuario só tem acesso ao carrinho se estiver logado

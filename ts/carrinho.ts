@@ -1,6 +1,15 @@
 const produtosCarrinho = document.querySelector<HTMLDivElement>('#produtos')!;
 const subtotalElement = document.querySelector<HTMLSpanElement>('#precoFinal')!;
 
+const verificarLogin = (): boolean => {
+  return localStorage.getItem('usuarioLogado') !== null; 
+};
+
+if (!verificarLogin()) {
+  alert('Você precisa estar logado para acessar o carrinho. Redirecionando para a página de login...');
+  window.location.replace('login.html');
+}
+
 interface Produto {
     id: number;
     title: string;
